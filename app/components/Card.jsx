@@ -13,7 +13,7 @@ const CardDialog = ({cardItem}) => {
     const router=useRouter()
     const loader=useLoader()
 
-    const handlePush=(url:string)=>{
+    const handlePush=(url)=>{
       loader.start()
       router.push(url)
     }
