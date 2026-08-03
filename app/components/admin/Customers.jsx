@@ -98,7 +98,7 @@ import {X} from "lucide-react"
       _type: "image",
       asset: {
         _type: "reference",
-        _ref: existingCard.backgroundImage.asset._ref || (existingCard.backgroundImage.asset as any)._id
+        _ref: existingCard.backgroundImage.asset._ref || (existingCard.backgroundImage.asset)._id
       },
       // Keep hotspot/crop data if they exist in your schema
       hotspot: existingCard.backgroundImage.hotspot || undefined,
@@ -138,7 +138,7 @@ import {X} from "lucide-react"
     blog: existingCard?.blog?._ref 
       ? { _type: "reference", _ref: existingCard.blog._ref }
       : existingCard?.blog?.["_id"] // fallback handle if your GROQ projection dereferenced it
-      ? { _type: "reference", _ref: (existingCard.blog as any)._id }
+      ? { _type: "reference", _ref: (existingCard.blog)._id }
       : undefined
   };
   
