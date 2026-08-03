@@ -57,7 +57,7 @@ const ChannelListContent = () => {
     )
 }
 
-const ChannelListContainer = ({ setNewMessage }) => {
+const ChannelListContainer = () => {
     const [toggleContainer, setToggleContainer] = useState(false)
     
     return (
