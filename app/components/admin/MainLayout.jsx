@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar"
 import { useClientAdmin } from "@/hooks/ClientAdmin"
 
 
-const MainLayout=({children}:{children:ReactNode})=>{
+const MainLayout=({children})=>{
     const isNonMobile=useMediaQuery("(min-width: 600px)")
     const [isSidebarOpen, setIsSidebarOpen]=useState(true)
     const mode=useSelector((state)=>state.global.mode)
