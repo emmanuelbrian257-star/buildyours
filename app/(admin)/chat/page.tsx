@@ -43,8 +43,5 @@ const Page = () => {
   )
 }
 
-<<<<<<< HEAD
 export default Page
-=======
 export default Page
->>>>>>> 62ee572 (updating)
