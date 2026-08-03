@@ -46,10 +46,7 @@ const Page = () => {
     <div className="app_wrapper">
       <Chat client={activeClient}>
         <ChannelListContainer
-          isCreating={isCreating}
-          setIsCreating={setIsCreating}
-          setCreateType={setCreateType}
-          setIsEditing={setIsEditing}
+          
         />
         <ChannelContainer
           isCreating={isCreating}
