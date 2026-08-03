@@ -1,4 +1,5 @@
-type SearchParams=Promise<{key: string}:string|string[]>
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+
 
 export default async function Page({
     searchParams
