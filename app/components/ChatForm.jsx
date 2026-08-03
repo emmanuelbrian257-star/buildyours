@@ -24,7 +24,7 @@ const ChatForm=({emailSchema, defaultValues, inputTextStyle})=>{
                 resolver: zodResolver(emailSchema)
             })
 
-            const onInvalid=(errors: any)=>{
+            const onInvalid=(errors)=>{
                 console.log("Form Validation Failed:", errors)
             }
 
