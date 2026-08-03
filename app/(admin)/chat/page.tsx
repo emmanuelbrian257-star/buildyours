@@ -8,8 +8,9 @@ import ChannelListContainer from '../../components/chat/ChannelListContainer'
 import Auth from '../../components/chat/Auth'
 import { useClientAdmin } from '@/hooks/ClientAdmin'
 import ChannelContainer from '@/app/components/chat/ChannelContainer'
+import {env} from "../../../env/index"
 
-const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
+const client=StreamChat.getInstance(env.NEXT_PUBLIC_STREAM_API_KEY)
 const authToken=true
 
 const Page = () => {
@@ -42,4 +43,8 @@ const Page = () => {
   )
 }
 
+<<<<<<< HEAD
 export default Page
+=======
+export default Page
+>>>>>>> 62ee572 (updating)

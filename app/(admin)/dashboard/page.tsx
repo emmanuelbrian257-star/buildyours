@@ -3,13 +3,16 @@ import React, { useState } from 'react'
 import {Box,useTheme, useMediaQuery} from "@mui/material"
 import Customers from '@/app/components/admin/Customers'
 import { LoaderContext } from '@/providers/LoaderProvider'
+import {StreamChat} from "stream-chat"
 import {Chat} from "stream-chat-react"
 import ChannelListContainer from '@/app/components/chat/ChannelListContainer'
 import { useClientAdmin } from '@/hooks/ClientAdmin'
 
 import LatestChatContainer from '@/app/components/chat/LatestChatContainer'
+import {env} from "../../../env/index"
 
-const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
+
+const client=StreamChat.getInstance(env.NEXT_PUBLIC_STREAM_API_KEY)
 
 const AdminPage = () => {
   const theme=useTheme()
