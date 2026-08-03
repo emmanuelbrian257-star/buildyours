@@ -9,7 +9,7 @@ import { setMode } from '@/state/lib/index'
 import SheetMenu from './Menu'
 
 const Header = ({cartOpen, setCartOpen}) => {
-    const [dialogOpen, setDialogOpen]=useState<boolean>(false)
+    const [dialogOpen, setDialogOpen]=useState(false)
     const dispatch=useDispatch()
     const theme=useTheme()
 
