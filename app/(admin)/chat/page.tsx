@@ -5,7 +5,7 @@ import { Chat } from "stream-chat-react"
 import { StreamChat } from "stream-chat"
 import 'stream-chat-react/dist/css/index.css'
 
-import ChannelListContainer from '../../../components/chat/ChannelListContainer'
+import ChannelListContainer from '../../components/chat/ChannelListContainer'
 import { useClientAdmin } from '../../../hooks/ClientAdmin'
 import ChannelContainer from '../../../app/components/chat/ChannelContainer'
 import { env } from "@/env/index"
