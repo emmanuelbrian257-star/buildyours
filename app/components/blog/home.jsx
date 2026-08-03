@@ -25,9 +25,6 @@ import { LoaderContext } from '@/providers/LoaderProvider'
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(Draggable)
 
-type ValuePiece=Date | null
-
-type Value=ValuePiece | [ValuePiece, ValuePiece]
 
 
 
