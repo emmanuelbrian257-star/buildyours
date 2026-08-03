@@ -18,7 +18,7 @@ export default function SmoothScroll({ children }) {
     lenis.on("scroll", ScrollTrigger.update);
 
     // Drive Lenis from GSAP's ticker
-    const update = (time: number) => {
+    const update = (time) => {
       lenis.raf(time * 1000); // GSAP gives seconds, Lenis expects milliseconds
     };
     gsap.ticker.add(update);
