@@ -79,7 +79,7 @@ const Footer = () => {
   const emailSchema={
     email:email,
     chat: chat
-  } as const
+  }
     const defaultValues={
         email:{
           email:'',
@@ -91,7 +91,7 @@ const Footer = () => {
           message:'',
           attachment:null
         } 
-    } as const
+    } 
 
 
   return (
