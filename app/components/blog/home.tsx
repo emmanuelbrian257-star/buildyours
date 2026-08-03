@@ -76,7 +76,7 @@ const blogDetailsQuery = groq`*[_type == "blogcard"][0].card[blog->BlogTitle == 
 }`;
 
 
-const BlogHomePage = ({blog}:{blog:string}) => {
+const BlogHomePage = ({blog}:{blog:string|null}) => {
   const theme=useTheme()
   const container=useRef()
   const ready=useAppReady()
