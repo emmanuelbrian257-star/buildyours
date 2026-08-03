@@ -244,7 +244,7 @@ const Customers=()=>{
     const isNonMediumScreens=useMediaQuery("(min-width: 1200px)")
     const rows=[]
 
-    const handleSubmit=async(itemId:string )=>{
+    const handleSubmit=async(itemId)=>{
       if(!itemId) return
 
       const filterResult=blogDetails&&blogDetails?.filter((item)=>item._key===itemId)
