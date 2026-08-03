@@ -6,9 +6,10 @@ import { LoaderContext } from '@/providers/LoaderProvider'
 import {Chat} from "stream-chat-react"
 import ChannelListContainer from '@/app/components/chat/ChannelListContainer'
 import { useClientAdmin } from '@/hooks/ClientAdmin'
-import { client } from '../chat/page'
+
 import LatestChatContainer from '@/app/components/chat/LatestChatContainer'
 
+const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
 
 const AdminPage = () => {
   const theme=useTheme()
