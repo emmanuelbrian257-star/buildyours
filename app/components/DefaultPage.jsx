@@ -29,13 +29,13 @@ const fetchBlogDetailsQuery=groq`*[_type=='card']{
 
 
 const DefaultHomePage = () => {
-  const [blogDetails, setBlogDetails]=useState<FetchBlogDetailsQueryResult>()
+  const [blogDetails, setBlogDetails]=useState()
 
   const [fontsLoaded, setFontsLoaded]=useState(false)
 
   const {isLoading}=useContext(LoaderContext)
   const ready=useAppReady()
-    const [shoppingCartOpen, setShoppingCartOpen]=useState<boolean>(false)
+    const [shoppingCartOpen, setShoppingCartOpen]=useState(false)
 
     const fontLoaded=async()=>{
         await document.fonts.ready.then(()=>{
