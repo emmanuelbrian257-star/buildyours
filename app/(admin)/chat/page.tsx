@@ -17,7 +17,7 @@ const Page = () => {
     const [createType, setCreateType]=useState("")
     const [isCreating, setIsCreating]=useState(false)
     const [isEditing, setIsEditing]=useState(false)
-    const [client, setClient]=useState<StreamChat|null>(null)
+    const [client, setClient]=useState()
     
     const {chatClient, isLoading, error, currentUser}=useClientAdmin()
 
