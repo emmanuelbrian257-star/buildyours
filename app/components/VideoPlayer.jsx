@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player"
 import {MediaController, MediaControlBar, MediaTimeRange, MediaTimeDisplay, MediaVolumeRange, MediaPlaybackRateButton, MediaPlayButton,  MediaSeekBackwardButton, MediaSeekForwardButton, MediaMuteButton, MediaFullscreenButton} from "media-chrome/react"
 
-const Player=({src}:{src:string})=>{
+const Player=({src})=>{
     return(
         <div>
             <MediaController className="h-full" style={{width:'100%', cursor:'grab', aspectRatio:'16/9'}}>
