@@ -7,12 +7,8 @@ import useAppReady from '@/hooks/AppReady'
 
 gsap.registerPlugin(ScrollTrigger)
 
-type billboard={
-  title: string
-  className?:string
-}
 
-const Billboard = ({title, className}:billboard) => {
+const Billboard = ({title, className}) => {
   /* const [scale, setScale]=useState(typeof window!=='undefined'?{
     width:window.innerWidth,
     height:window.innerHeight
