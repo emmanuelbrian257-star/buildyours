@@ -172,7 +172,7 @@ const BlogHomePage = ({blog}) => {
   }
   
   return (
-    <section className="bg-black" ref={container} className="overflow-hidden  h-full">
+    <section ref={container} className="overflow-hidden bg-black h-full">
       <Header cartOpen={cartOpen} setCartOpen={setCartOpen}/>
       <div ref={imageContainer} className="relative w-screen h-screen">
         {blogDetails?.map((blog)=>{
