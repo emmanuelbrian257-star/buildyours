@@ -8,11 +8,7 @@ import { useLenis } from "@/providers/LenisProvider";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface ScrollAnimationsProps {
-  children: React.ReactNode;
-}
-
-export default function SmoothScroll({ children }: ScrollAnimationsProps) {
+export default function SmoothScroll({ children }) {
   const lenis = useLenis();
 
   useEffect(() => {
