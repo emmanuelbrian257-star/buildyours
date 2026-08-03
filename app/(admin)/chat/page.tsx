@@ -9,7 +9,7 @@ import Auth from '../../components/chat/Auth'
 import { useClientAdmin } from '@/hooks/ClientAdmin'
 import ChannelContainer from '@/app/components/chat/ChannelContainer'
 
-export const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
+const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
 const authToken=true
 
 const Page = () => {
@@ -31,9 +31,9 @@ const Page = () => {
                 setIsEditing={setIsEditing}
             />
             <ChannelContainer
+              isCreating={isCreating}
               setIsCreating={setIsCreating}
               isEditing={isEditing}
-              isCreating={isCreating}
               setIsEditing={setIsEditing}
               createType={createType}
             />
