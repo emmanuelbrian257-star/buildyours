@@ -73,14 +73,14 @@ const blogDetailsQuery = groq`*[_type == "blogcard"][0].card[blog->BlogTitle == 
 }`;
 
 
-const BlogHomePage = ({blog}:{blog:string|null}) => {
+const BlogHomePage = ({blog}) => {
   const theme=useTheme()
   const container=useRef()
   const ready=useAppReady()
   const readMore=useRef("")
   const [open, setOpen]=useState(false)
   const imageContainer=useRef()
-  const [blogDetails, setBlogDetails]=useState<BlogDetailsQueResult|[]>([])
+  const [blogDetails, setBlogDetails]=useState([])
   const [cartOpen, setCartOpen]=useState(false)
   const loader=useLoader()
   const {isLoading}=useContext(LoaderContext)
