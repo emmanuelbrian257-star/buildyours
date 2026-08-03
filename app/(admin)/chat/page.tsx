@@ -12,7 +12,7 @@ import ChannelContainer from '@/app/components/chat/ChannelContainer'
 export const client=StreamChat.getInstance(process.env.NEXT_PUBLIC_STREAM_API_KEY)
 const authToken=true
 
-const ChatPage = () => {
+const Page = () => {
     const [createType, setCreateType]=useState("")
     const [isCreating, setIsCreating]=useState(false)
     const [isEditing, setIsEditing]=useState(false)
@@ -31,9 +31,9 @@ const ChatPage = () => {
                 setIsEditing={setIsEditing}
             />
             <ChannelContainer
-              isCreating={isCreating}
               setIsCreating={setIsCreating}
               isEditing={isEditing}
+              isCreating={isCreating}
               setIsEditing={setIsEditing}
               createType={createType}
             />
@@ -42,4 +42,4 @@ const ChatPage = () => {
   )
 }
 
-export default ChatPage
+export default Page
