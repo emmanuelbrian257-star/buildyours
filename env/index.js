@@ -14,6 +14,7 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string().min(1),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL: z.string().min(1),
     NEXT_PUBLIC_STREAM_APP_ID: z.string().min(1),
+    NEXT_PUBLIC_STREAM_API_KEY: z.string().min(1),
     NEXT_PUBLIC_API_URL: z.string(),
   },
   runtimeEnv: {
@@ -29,5 +30,6 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL,
     NEXT_PUBLIC_STREAM_APP_ID: process.env.NEXT_PUBLIC_STREAM_APP_ID,
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_STREAM_API_KEY: process.env.NEXT_PUBLIC_STREAM_API_KEY,
   },
 });
