@@ -9,27 +9,30 @@ export const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().min(1),
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string().min(1),
     NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string().min(1),
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL: z.string().min(1),
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().min(1),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string().optional(),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL: z.string().optional(),
     NEXT_PUBLIC_STREAM_APP_ID: z.string().min(1),
     NEXT_PUBLIC_STREAM_API_KEY: z.string().min(1),
     NEXT_PUBLIC_API_URL: z.string(),
   },
+  // Treats empty string env variables ("") as undefined
+  emptyStringAsUndefined: true,
   runtimeEnv: {
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     STREAM_API_SECRET: process.env.STREAM_API_SECRET,
     SANITY_API_TOKEN: process.env.SANITY_API_TOKEN,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
     NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL:
       process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL,
     NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL:
       process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL,
     NEXT_PUBLIC_STREAM_APP_ID: process.env.NEXT_PUBLIC_STREAM_APP_ID,
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     NEXT_PUBLIC_STREAM_API_KEY: process.env.NEXT_PUBLIC_STREAM_API_KEY,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
   },
 });
