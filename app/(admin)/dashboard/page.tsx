@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 "use client"
 import React, { useState } from 'react'
 import {Box,useTheme, useMediaQuery} from "@mui/material"
