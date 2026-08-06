@@ -50,7 +50,7 @@ export async function handleFormSubmission(formData) {
     await channel.create();
 
     // Initialize attachments array
-    let attachments: any[] = [];
+    let attachments= [];
 
     // 3. Handle the File Upload to Stream CDN
     if (file && file.size > 0 && file.name !== 'undefined') {
