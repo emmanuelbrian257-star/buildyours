@@ -1,7 +1,7 @@
-import {createClient, type ClientConfig} from "@sanity/client"
+import {createClient} from "@sanity/client"
 import imageUrlBuilder from "@sanity/image-url"
 
-const config:ClientConfig={
+const config={
     projectId:"56y0sr7e",
     dataset:'production',
     apiVersion:"2024-01-01",
