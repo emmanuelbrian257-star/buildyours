@@ -186,24 +186,31 @@ function FieldError({
       return children
     }
 
-    if (!errors?.length) {
+    if (!errors || errors.length === 0) {
       return null
     }
 
-    const uniqueErrors = [
-      ...new Map((errors ?? []).map((error) => [error?.message, error])).values(),
-    ]
+    const uniqueMessages = Array.from(
+      new Set(
+        errors
+          .map((error) => error?.message)
+          .filter((msg): msg is string => Boolean(msg))
+      )
+    )
 
-    if (uniqueErrors?.length == 1) {
-      return uniqueErrors[0]?.message
+    if (uniqueMessages.length === 0) {
+      return null
+    }
+
+    if (uniqueMessages.length === 1) {
+      return uniqueMessages[0]
     }
 
     return (
       <ul className="ml-4 flex list-disc flex-col gap-1">
-        {uniqueErrors.map(
-          (error, index) =>
-            error?.message && <li key={index}>{error.message}</li>
-        )}
+        {uniqueMessages.map((message, index) => (
+          <li key={index}>{message}</li>
+        ))}
       </ul>
     )
   }, [children, errors])
