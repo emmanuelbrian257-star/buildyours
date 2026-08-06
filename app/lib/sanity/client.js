@@ -17,5 +17,5 @@ const adminConfig={
 export const adminClient=createClient(adminConfig)
 const builder=imageUrlBuilder(client)
 
-export const urlFor=(source:string)=>builder.image(source)
+export const urlFor=(source)=>builder.image(source)
 export default client;
