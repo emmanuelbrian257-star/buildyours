@@ -15,11 +15,11 @@ if (!apiKey || !apiSecret) {
 }
 const serverClient = StreamChat.getInstance(apiKey, apiSecret);
 
-export async function handleFormSubmission(formData: FormData) {
-  const message = formData.get('message') as string;
-  const email = formData.get('email') as string;
-  const number = formData.get("phonenumber") as string;
-  const file = formData.get('attachment') as File;
+export async function handleFormSubmission(formData) {
+  const message = formData.get('message');
+  const email = formData.get('email');
+  const number = formData.get("phonenumber");
+  const file = formData.get('attachment');
 
   
 
