@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react"
 import {InviteIcon} from '../assets'
 import {Avatar, useChatContext} from "stream-chat-react"
 
-const ListContainer=({children}:{children:React.ReactNode})=>{
+const ListContainer=({children})=>{
     return(
         <div className="user-list__container">
             <div className="user-list__header">
